@@ -1,0 +1,89 @@
+@use '../../../styling/' as *;
+#footer{
+    position: relative;
+    background-color: $black;
+    padding: 2rem 0;
+    background-image: url("../../../images/Footer/footer-bg.jpg");
+}
+.footer_container{
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    @include md {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.footer_box_content{
+    h4{
+        
+        margin-bottom: 1rem;
+
+    }
+    p,h4,a{
+        color: #bbb;
+        text-align: center;
+        @include md{
+            text-align: start;
+        }
+    }
+    img{
+        width: 12rem;
+        margin: 0 auto;
+        margin-bottom: 1.75rem;
+        @include md{
+            margin-left: 0;
+        }
+    }
+    a{
+        display: block;
+        color: #bbb;
+        line-height: 2rem;
+        font-size: 1rem;
+        margin-bottom: .75rem;
+        &:hover{
+            text-decoration:underline !important;
+        }
+    }
+}
+.bottom_footer{
+    display: flex;
+    justify-content: center;
+    margin:  0 auto;
+    margin-top: 3rem;
+    align-items: center;
+    color: $gray;
+    height: 40px;
+    position: relative;
+}
+.social_image {
+    width: 2rem;
+    height: 2rem;
+    transition: $transition;
+    &:not(:nth-child(4)) {
+      margin-right: 2rem;
+    }
+    &:hover {
+      border-radius: 5px;
+      padding: 0.3rem;
+    }
+    &:hover:nth-child(1) {
+      background-color: #3b5998;
+    }
+    &:hover:nth-child(2) {
+      background-color: #6441a4;
+    }
+    &:hover:nth-child(3) {
+      background-color: #0e76a8;
+    }
+    &:hover:nth-child(4) {
+      background-color: #171515;
+    }
+    img{
+        width: 100%;
+    }
+  }
+.social{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,38 @@
+@use "../../styling/" as *;
+
+#contact {
+  padding-top: 4rem;
+}
+.contact_container {
+  h4 {
+    text-align: center;
+    color: #fff;
+    padding: 1.5rem 0;
+  }
+}
+.header {
+  background-image: url("../../images/Contact/topbanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact_header {
+  background-color: rgb(0, 0, 0, 0.7);
+}
+.contact_wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  border: 1px solid #000;
+  @include md {
+    grid-template-columns: repeat(1, 2fr 3fr);
+    margin: 3rem 0;
+  }
+}
+.contact_image {
+  display: flex;
+  align-items: stretch;
+}
+.contact_form {
+  padding: 2rem 2rem;
+}

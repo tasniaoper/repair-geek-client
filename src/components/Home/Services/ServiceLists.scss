@@ -1,0 +1,82 @@
+@use "../../../styling/" as *;
+
+.service_block {
+  background-color: #111;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.service_box {
+  padding: 1rem 2rem;
+  h5 {
+    color: $bg-color;
+    text-align: center;
+  }
+  p {
+    font-size: .875rem;
+  }
+}
+
+.service_image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  img {
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.service_bottom{
+  text-align: center;
+  padding: 2rem 0;
+}
+.service_btn{
+  border: none;
+  border-radius:5px;
+  padding: .8em 1.5em;
+  background-color: $bg-color;
+  border: 1px solid $bg-color;
+  text-transform:uppercase;
+  color: $black;
+  font-size: .725rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing:1px;
+  z-index:1;
+  overflow:hidden;
+  position: relative;
+  transition:0.3s;
+  cursor: pointer;
+  @include md{
+    font-size: .875rem;
+  }
+  @include xl{
+    font-size: 1rem;
+  }
+  
+}
+.service_btn::before{
+  content:"";
+  width:0%;
+  height:100%;
+  background-color:#111;
+  z-index: -1;
+  position:absolute;
+  transition:0.5s;
+  bottom:0;
+  right:50%;
+  transform: translate(50%);
+  
+}
+.service_btn:hover{
+  color: #fff;
+}
+.service_btn:hover::before{
+  width:100%;
+}

@@ -1,0 +1,19 @@
+@use '../../../../styling/' as *;
+
+.manage_services{
+    background-color: $bg-color;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 8px 35px -20px #000;
+    margin-bottom: 5rem !important;
+    min-height: 40vh;
+}
+.icon{
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: .3s all ease;
+    margin-left: 1rem;
+    &:hover{
+        color:red;
+    }
+}

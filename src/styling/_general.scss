@@ -1,0 +1,151 @@
+@use "./config" as config;
+@use "./mixins" as mixins;
+
+.container {
+  width: config.$container-sm;
+  max-width: 1224px;
+  margin: 0 auto;
+  @include mixins.md {
+    width: config.$container-md;
+  }
+  @include mixins.xl {
+    width: config.$container-lg;
+  }
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+section {
+  padding: 2rem 0;
+  @include mixins.md {
+    padding: 4rem 0;
+  }
+  @include mixins.xxl {
+    padding: 7rem 0;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 3rem;
+  @include mixins.md {
+    font-size: 3.5rem;
+    line-height: 3.8rem;
+  }
+  @include mixins.xl {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+
+h2 {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 800;
+  color: config.$black;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+  @include mixins.md {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: start;
+  }
+}
+h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 3rem;
+
+  @include mixins.md {
+    font-size: 1.5rem;
+    line-height: 3.8rem;
+  }
+  @include mixins.xl {
+    font-size: 1.8rem;
+    line-height: 4.5rem;
+  }
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 1.8rem;
+
+  @include mixins.md {
+    font-size: 1.2rem;
+  }
+  @include mixins.xl {
+    font-size: 1.2rem;
+
+  }
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Roboto', 'sans-serif';
+  text-align: justify;
+  line-height: 1.5rem;
+  color: config.$white;
+}
+a{
+  text-decoration: none !important;
+}
+
+.btn-main{
+  border: none;
+  border-radius:5px;
+  padding: 1.3em 2.2em;
+  background-color: #000;
+  border: 1px solid #000;
+  text-transform:uppercase;
+  color: white;
+  font-size: .725rem;
+  font-weight: 500;
+  font-family: 'Roboto', 'sans-serif';
+  letter-spacing:1.5px;
+  z-index:1;
+  overflow:hidden;
+  position: relative;
+  transition:0.3s;
+  cursor: pointer;
+  @include mixins.md{
+    font-size: .875rem;
+  }
+  @include mixins.xl{
+    font-size: 1rem;
+  }
+  
+}
+.btn-main::before{
+  content:"";
+  width:0%;
+  height:100%;
+  background-color:config.$bg-color;
+  z-index: -1;
+  position:absolute;
+  transition:0.5s;
+  bottom:0;
+  right:50%;
+  transform: translate(50%);
+  
+}
+.btn-main:hover{
+  color: #000;
+}
+.btn-main:hover::before{
+  width:100%;
+}
+
+.btn-primary {
+  @include mixins.button;
+}
+.btn-secondary {
+  @include mixins.button2;
+}

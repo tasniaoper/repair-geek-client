@@ -1,0 +1,41 @@
+@use '../../../styling/' as *;
+#whyUs{
+    background-image: url('../../../images/Footer/footer-bg.jpg');
+}
+.whyUs_container{
+        h2{
+            text-align: center;
+            color: $bg-color;
+        }
+}
+.whyUs_wrapper{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+    margin: 4rem 0 2rem;
+    @include md{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.whyUs_block{
+    border: 1px dashed $bg-color;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 2.5fr );
+    gap: 1rem;
+}
+.whyUs_image{
+
+    border-right: 1px dashed $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 50%;
+    }
+}
+.whyUs_text{
+    padding-right: 1rem;
+    h4{
+        color: $bg-color;
+    }
+}

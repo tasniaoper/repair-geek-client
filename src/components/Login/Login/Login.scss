@@ -1,0 +1,59 @@
+@use '../../../styling/' as *;
+#login{
+    // background: linear-gradient(to left, $bg-color 50%, #000000 50%);
+   
+    padding-top: 7rem;
+}
+
+.login_wrapper{
+    background: #000;
+    display: grid;
+    margin-bottom: 4rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px -15px #000;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      
+      background: linear-gradient(to left, #000 50%, $bg-color 50%);
+      gap: 0;
+    }
+
+}
+.login_right{
+    h2{
+        color: $bg-color;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    button{
+        display: block;
+        background-color: $bg-color;
+        opacity: 1;
+        padding: 1em 2em;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        
+        cursor: pointer;
+        transition: $transition;
+        &:hover{
+            transform: translateY(-7px);
+            box-shadow: 2px 2px 30px -18px $bg-color;
+        }
+    }
+    .sign_btn{
+        margin: 4rem 0 5rem;
+        display: flex;
+        justify-content: center;
+        @include md{
+            margin-top: 8rem;
+        }
+    }
+}
+.login_left_image{
+    img{
+        max-height: 30rem;
+    }
+}

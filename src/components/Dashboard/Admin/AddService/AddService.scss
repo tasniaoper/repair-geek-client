@@ -1,0 +1,82 @@
+@use "../../../../styling/" as *;
+
+.content_details {
+
+    h2 {
+        text-align: center;
+        margin-top: 2rem;
+      }
+}
+.add_service{
+    background-color: $bg-color;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 8px 35px -20px #000;
+    margin-bottom: 5rem !important;
+}
+.add_service_box {
+  
+  input{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    min-height: 55px;
+    padding-left: 20px;
+    background-color: #fff;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+  }
+  label{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  textarea{
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+.add_photo{
+    label{
+        font-size: 16px;
+        font-weight: 600;
+      }
+      input{
+        width: 100%;
+        outline: none;
+        min-height: 55px;
+        margin: 15px 0;
+      }
+
+}
+
+.submit_btn{
+    border: none;
+    border-radius:5px;
+    padding: 1em 2.5em;
+    background-color: #000;
+    border: 1px solid #000;
+    text-transform:uppercase;
+    color: white;
+    font-size: .725rem;
+    font-weight: 600;
+    font-family: 'Roboto', 'sans-serif';
+    letter-spacing:1.5px;
+    z-index:1;
+    overflow:hidden;
+    position: relative;
+    transition:0.3s;
+    cursor: pointer;
+    @include md{
+      font-size: .875rem;
+    }
+    @include xl{
+      font-size: 1rem;
+    }
+    &:hover{
+        box-shadow: 5px 5px 25px -5px #000;
+    }
+}

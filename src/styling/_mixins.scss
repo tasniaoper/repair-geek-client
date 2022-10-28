@@ -1,0 +1,146 @@
+@use "./functions" as *;
+@use "./config" as config;
+
+@mixin sm {
+  @media screen and (min-width: 512px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (orientation: landscape),
+    screen and (max-width: 768px),
+    screen and (max-height: 512px) {
+    @content;
+  }
+}
+
+@mixin p($size) {
+  padding: toRem($size);
+}
+@mixin px($size) {
+  padding-left: toRem($size);
+  padding-right: toRem($size);
+}
+@mixin py($size) {
+  padding-top: toRem($size);
+  padding-bottom: toRem($size);
+}
+@mixin m($size) {
+  margin: toRem($size);
+}
+
+@mixin mx($size) {
+  margin-left: toRem($size);
+  margin-right: toRem($size);
+}
+
+@mixin my($size) {
+  margin-top: toRem($size);
+  margin-bottom: toRem($size);
+}
+
+@mixin pl($size) {
+  padding-left: toRem($size);
+}
+@mixin pr($size) {
+  padding-right: toRem($size);
+}
+
+@mixin pb($size) {
+  padding-bottom: toRem($size);
+}
+@mixin pt($size) {
+  padding-top: toRem($size);
+}
+
+@mixin ml($size) {
+  margin-left: toRem($size);
+}
+
+@mixin mr($size) {
+  margin-right: toRem($size);
+}
+
+@mixin mt($size) {
+  margin-top: toRem($size);
+}
+
+@mixin mb($size) {
+  margin-bottom: toRem($size);
+}
+
+@mixin button() {
+  display: inline-block;
+  width: fit-content;
+  padding: .8em 2.5em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: config.$black;
+  background-color: config.$bg-color;
+  border: 1px solid config.$black;
+  border-radius: 7px;
+  transition: config.$transition;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 6px 24px rgba(255, 102, 0, 0.38);
+    color: config.$white;
+    background-color: config.$black;
+  }
+  @include md {
+    font-size: 0.9rem;
+  }
+  @include lg {
+    font-size: 1rem;
+  }
+}
+@mixin button2() {
+  display: inline-block;
+  width: fit-content;
+  padding: 1em 2.5em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Manrope";
+  color: config.$black;
+  background-color: config.$white;
+  border: 1px solid config.$orange;
+  border-radius: 7px;
+  transition: config.$transition;
+  cursor: pointer;
+  &:hover {
+    color: config.$white;
+    background-color: config.$orange;
+    box-shadow: 0px 6px 24px rgba(255, 102, 0, 0.38);
+  }
+  @include md {
+    font-size: 0.9rem;
+  }
+  @include lg {
+    font-size: 1rem;
+  }
+}

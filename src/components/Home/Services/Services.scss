@@ -1,0 +1,37 @@
+@use '../../../styling/' as *;
+#services{
+    background-color: $bg-color;
+}
+.services_container{
+    h2{
+        text-align: center;
+    }
+}
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  outline: none;
+  transition: all 0.5s;
+  border-radius: 35px;
+  z-index: 100;
+  border: none;
+  background: transparent;
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.rightArrow {
+  right: 3%;
+  top: 42%;
+}
+
+.leftArrow {
+  left: 3%;
+  top: 42%;
+  svg {
+    transform: rotate(180deg);
+  }
+}

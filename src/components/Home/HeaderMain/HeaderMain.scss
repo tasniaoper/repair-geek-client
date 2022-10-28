@@ -1,0 +1,58 @@
+@use "../../../styling/" as *;
+
+#header_main {
+  background-color: $bg-color;
+}
+.header_wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.header_box1{
+    h1{
+        margin: 3rem 0 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000;
+        max-width: 35rem;
+        @include md{
+            text-align: start;
+        }
+    }
+    p{
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 2rem 0;
+        color: $black;
+        text-align: center;
+        @include md{
+            text-align: start;
+            font-size: 1.2rem;
+            margin: 2rem 0 3.5rem;
+        }
+    }
+}
+.contact_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include md{
+        justify-content: flex-start;
+    }
+}
+.header_box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_image{
+    @include md{
+        margin-top: 3rem;
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+    overflow: hidden;
+
+}

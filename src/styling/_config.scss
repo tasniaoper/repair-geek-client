@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+$white: #FFFFFF;
+$bg-color: #f7cf47;
+$gray: #5B5B5B;
+$black: #000000;
+$orange: #FF6600;
+$transition: all 400ms ease;
+
+$container-lg: 85%;
+$container-md: 90%;
+$container-sm:95%;
+
+body{
+    background: $white;
+    font-family: 'Roboto', 'sans-serif';
+}

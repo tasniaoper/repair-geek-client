@@ -1,0 +1,66 @@
+@use "../../../styling/" as *;
+
+#about {
+//   background-color: #000;
+background-image: url('../../../images/About/bg.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+  @include md{
+    padding: 5rem 0;
+  }
+}
+.about_wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.about_box1{
+    order: 2;
+    @include md{
+        order: 1;
+    }
+}
+.about_image{
+    height: 100%;
+    display: flex;
+    align-items:stretch;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    img{
+        transform: scale(1);
+        transition: 0.5s ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+
+.about_box2{
+    order: 1;
+    @include md{
+        order: 2;
+    }
+    h2,h5{
+        color: $bg-color;
+    }
+}
+.about_block{
+    display: flex;
+    margin: 2rem 0 0;
+    p{
+        padding: 0 5px;
+    }
+    img{
+        width: 60px;
+        padding: 10px;
+        margin-right: 5px;
+        @include md{
+            margin-right: 15px;
+
+        }
+    }
+}

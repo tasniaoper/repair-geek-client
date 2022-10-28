@@ -1,0 +1,25 @@
+@use '../../../../styling/' as *;
+
+.make_admin{
+    background-color: $bg-color;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 8px 35px -20px #000;
+}
+.make_admin_box{
+    input{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        min-height: 55px;
+        padding-left: 20px;
+        background-color: #fff;
+        margin: 1rem 0 2rem;
+        transition: all 0.3s ease;
+      }
+      label{
+        font-size: 16px;
+        font-weight: 600;
+      }
+}
